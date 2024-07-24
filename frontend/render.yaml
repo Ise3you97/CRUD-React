@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mern-frontend
+    env: node
+    plan: free
+    buildCommand: 'cd frontend && npm install && npm run build'
+    startCommand: 'cd frontend && npm run start'
+    staticPublishPath: frontend/build
