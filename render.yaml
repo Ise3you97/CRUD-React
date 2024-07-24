@@ -3,10 +3,18 @@ services:
     name: mern-backend
     env: node
     plan: free
-    buildCommand: 'npm install'
-    startCommand: 'npm start'
+    buildCommand: 'cd backend && npm install'
+    startCommand: 'cd backend && npm start'
     envVars:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
         value: <tu_mongodb_uri>
+
+  - type: web
+    name: mern-frontend
+    env: node
+    plan: free
+    buildCommand: 'cd frontend && npm install && npm run build'
+    startCommand: 'cd frontend && npm run start'
+    staticPublishPath: frontend/build
