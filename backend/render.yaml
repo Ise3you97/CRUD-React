@@ -9,5 +9,5 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        value: mongodb+srv://Kelvin:Kelvin12345@cluster0.gjcfgsq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+        value: <tu_mongodb_uri>
 
