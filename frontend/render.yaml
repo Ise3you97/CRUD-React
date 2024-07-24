@@ -1,16 +1,8 @@
-{
-  "name": "mern-frontend",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  }
-}
+services:
+  - type: web
+    name: mern-frontend
+    env: node
+    plan: free
+    buildCommand: 'cd frontend && npm install && npm run build'
+    startCommand: 'cd frontend && npm start'
+    staticPublishPath: frontend/build

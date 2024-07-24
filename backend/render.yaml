@@ -1,13 +1,12 @@
-{
-  "name": "mern-backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.10.9",
-    "cors": "^2.8.5"
-  }
-}
+services:
+  - type: web
+    name: mern-backend
+    env: node
+    plan: free
+    buildCommand: 'cd backend && npm install'
+    startCommand: 'cd backend && npm start'
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://Kelvin:Kelvin12345@cluster0.gjcfgsq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
