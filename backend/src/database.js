@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const URI = process.env.MONGODB_URI;
-//const URI = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/database';
+//const URI = process.env.MONGODB_URI;
+const URI = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/database';
 console.log(process.env.MONGODB_URI)
 
 mongoose.connect(URI,{
