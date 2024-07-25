@@ -11,7 +11,7 @@ services:
     env: node
     plan: starter
     buildCommand: npm install
-    startCommand: npm run dev
+    startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
