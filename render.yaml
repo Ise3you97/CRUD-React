@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: frontend
+    env: static
+    staticPublishPath: frontend/build
+    buildCommand: cd frontend && npm install && npm run build
+    pullRequestPreviewsEnabled: true
+
+  - type: web
+    name: backend
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: mongodb://Kelvin:Kelvin12345@cluster0.gjcfgsq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+    pullRequestPreviewsEnabled: true
